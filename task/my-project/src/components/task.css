@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; 
+    width: 100vw;
+}
+
+.leftsection {
+    width: 50%; 
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.progresswrapper {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.progressbar {
+    height: 5px;
+    background-color: white; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.progressbar {
+    display: flex;
+    height: 5px;
+    background: transparent;
+}
+
+.segment {
+    flex: 1; 
+    background-color: white;
+    transition: flex 0.3s ease-in-out; 
+}
+
+.segment.active {
+    background-color: orange; 
+}
+
+.progresslabels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ddd;
+    transition: margin 0.3s ease-in-out;
+}
+
+.progresslabels.closer .label:nth-child(1),
+.progresslabels.closer .label:nth-child(2) {
+    margin-right: 10vw; 
+}
+
+.progresslabels.closer2 .label:nth-child(2),
+.progresslabels.closer2 .label:nth-child(3) {
+    margin-right: 10vw; 
+}
+
+.progresslabels.closer3 .label:nth-child(3),
+.progresslabels.closer3 .label:nth-child(4) {
+    margin-right: 10vw; 
+}
+
+
+.label {
+    transition: color 0.3s ease-in-out;
+}
+
+.label.selected {
+    color: orange; 
+}
+
+.label.selected::before {
+    content: "[";
+    margin-right: 2px;
+}
+
+.label.selected::after {
+    content: "]";
+    margin-left: 2px;
+}
+
+.leftsectiontext h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.leftsectiontext p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.rightsection {
+    height: 100vh;
+    overflow-y: scroll;
+    background: black;
+}
+
+.rightsection > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.demoimage {
+    width: 60%; 
+    height: auto;
+}
